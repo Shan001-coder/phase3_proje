@@ -1,0 +1,75 @@
+
+# Customer Churn Prediction Project
+
+## Overview
+This project applies machine learning techniques to predict customer churn.  
+The goal is to identify at‑risk customers so businesses can take proactive retention measures.  
+
+We iteratively developed models — starting with Multiple Linear Regression, then Decision Tree, Random Forest, and Regression Tree — and evaluated them using appropriate metrics.  
+The **Random Forest classifier** was chosen as the final model due to its superior performance (Accuracy = 94%, ROC‑AUC = 0.94).
+
+---
+
+#Repository Structure
+```
+├── data/              # Raw and processed datasets (excluded from GitHub via .gitignore if large)
+├── notebooks/         # Jupyter notebooks for EDA, modelling, and evaluation
+├── src/               # Source code (functions, preprocessing scripts, model training)
+├── results/           # Figures, confusion matrices, ROC curves, feature importance plots
+├── presentation/      # Final presentation slides
+├── README.md          # Project overview and navigation
+└── .gitignore         # Excludes large/sensitive files
+```
+
+---
+
+#Data Science Workflow
+1. **Data Collection & Cleaning**  
+   - Handled missing values, encoded categorical variables, normalized features.  
+
+2. **Exploratory Data Analysis (EDA)**  
+   - Visualized churn distribution, correlations, and feature trends.  
+
+3. **Model Development**  
+   - Baseline: Multiple Linear Regression (poor recall for churners).  
+   - Decision Tree: Improved recall for churners.  
+   - Random Forest: Best overall performance, chosen as final model.  
+   - Regression Tree: Applied for continuous outcomes (R² ≈ 0.60).  
+
+4. **Model Evaluation**  
+   - Metrics: Accuracy, Precision, Recall, F1, ROC‑AUC.  
+   - Confusion matrices (raw + normalized).  
+   - ROC curve visualization.  
+   - Feature importance analysis for interpretability.
+---
+
+# Final Model Evaluation
+- **Random Forest Classifier**
+  - Accuracy: 94%  
+  - Precision (Churn): 0.92  
+  - Recall (Churn): 0.69  
+  - F1 (Churn): 0.79  
+  - ROC‑AUC: 0.94  
+- Utility: Reliable identification of churners with actionable feature insights.  
+- Business Impact: Supports targeted retention campaigns by flagging at‑risk customers.
+
+---
+
+# How to Navigate
+- Start with `notebooks/` for step‑by‑step analysis.  
+- Check `results/` for evaluation figures (confusion matrices, ROC curves, feature importance).  
+- Review `presentation/` for the final project summary.  
+
+---
+
+## 📎 Links
+- [Presentation Slides](presentation/final_slides.pdf)  
+- [Data Source](link-to-dataset-if-public)  
+
+---
+
+# Notes
+- Large datasets are excluded via `.gitignore`.  
+- Sensitive information is not pushed to GitHub.  
+```
+
