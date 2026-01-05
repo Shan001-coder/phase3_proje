@@ -1,0 +1,193 @@
+ # CUSTOMER CHURN PREDICTION USING MACHINE LEARNING MODELS
+
+---
+
+## 1. Business Understanding
+
+### Problem Statement
+Customer churn is a major challenge for subscription-based businesses. When customers discontinue a service, the business not only loses direct revenue but also incurs higher costs acquiring new customers compared to retaining existing ones.  
+
+The key challenge for the business is the **lack of early visibility** into which customers are likely to churn, making it difficult to intervene in time with retention strategies.
+
+---
+
+### Business Objective
+The objective of this project is to build machine learning models that can **predict which customers are likely to churn** based on historical usage, service plans, and customer service interactions.  
+
+By identifying high-risk customers early, the business can:
+- Design targeted retention strategies
+- Reduce revenue loss
+- Improve customer satisfaction
+- Optimize marketing and service resources
+
+---
+
+### Key Stakeholders
+- Business management teams
+- Customer retention and marketing teams
+- Customer service departments
+
+---
+
+## 2. Project Objectives
+- Explore and analyze customer churn data
+- Identify the most important factors influencing churn
+- Build multiple machine learning models for churn prediction
+- Evaluate model performance using appropriate metrics
+- Recommend the best-performing model for business deployment
+
+---
+
+## 3. Dataset Overview
+- **Number of observations:** 3,333  
+- **Number of features:** 21  
+- **Target variable:** `churn`  
+  - 1 → Customer churned  
+  - 0 → Customer did not churn  
+
+The dataset includes customer usage metrics, service plan information, and customer service interaction data.
+
+---
+
+## 4. Data Preparation
+The following preprocessing steps were performed:
+- Validation of data structure and data types
+- Encoding of categorical variables
+- Feature selection
+- Splitting data into training and testing sets
+
+These steps ensured the data was suitable for machine learning modeling.
+
+---
+
+## 5. Exploratory Data Analysis (EDA)
+
+EDA was conducted to understand customer behavior patterns and churn distribution.
+
+Key observations include:
+- Churned customers tend to make **more customer service calls**
+- Customers with **higher usage minutes and charges** show higher churn risk
+- International plan subscribers demonstrate different churn behavior compared to others
+
+These insights guided feature importance interpretation and model selection.
+
+---
+
+## 6. Modeling Approach
+
+Three supervised machine learning models were trained and evaluated:
+
+- Logistic Regression  
+- Decision Tree Classifier  
+- Random Forest Classifier  
+
+Each model was trained on the training dataset and evaluated on unseen test data.
+
+---
+
+## 7. Model Evaluation
+
+### Evaluation Metrics Used
+The models were evaluated using the following metrics:
+
+- **Accuracy** – Overall correctness of predictions  
+- **Precision** – Ability to correctly identify churners  
+- **Recall** – Ability to capture actual churners  
+- **F1-Score** – Balance between precision and recall  
+- **ROC-AUC** – Ability to distinguish between churn and non-churn customers  
+
+---
+
+### Model Performance Comparison
+
+| Model                     | Accuracy | ROC-AUC | Churner Recall |key Insight                                                            |
+| ------------------------- | -------- | ------- | -------------- | ---------------------------------------------------------------------- |
+| Logistic Regression       | 86%      | 0.83    | 0.18           | Poor churn detection; works for general patterns                       |
+| Decision Tree (Optimized) | 94%      | 0.90  | 0.73           | Much better at detecting churners; strong overall performance          |
+| Random Forest (Optimized) | 95%      | 0.94  | 0.78           | Best overall; accurately identifies most churners, robust and reliable 
+
+> The Random Forest model consistently outperformed the other models.
+
+---
+
+### Why Random Forest Was Selected
+- High overall accuracy
+- Strong recall for detecting churners
+- Excellent ROC-AUC score
+- Balanced performance across churn and non-churn classes
+
+This makes it particularly suitable for business use where **missing churners is costly**.
+
+---
+
+## 8. Feature Importance & Key Drivers of Churn
+
+Feature importance analysis from the Random Forest model revealed:
+
+- **Daily usage minutes and charges** are the strongest predictors of churn  
+- **Customer service calls** strongly indicate dissatisfaction  
+- **International plan status** influences churn likelihood  
+- **Night usage and account length** have minimal impact  
+
+---
+
+## 9. Business Insights
+- High usage combined with high charges increases churn risk
+- Frequent customer service calls often signal unresolved issues
+- Poor plan fit (e.g., international plans) can drive dissatisfaction
+- Not all usage metrics are equally important for intervention
+
+---
+
+## 10. Conclusion
+Machine learning models can effectively predict customer churn. Among the models tested, the **Random Forest model** demonstrated superior performance and reliability.  
+
+Understanding churn drivers enables businesses to act proactively rather than reactively, reducing customer loss and improving long-term profitability.
+
+---
+
+## 11. Business Recommendations
+- Prioritize monitoring daily usage and charges
+- Reduce customer service call frequency by resolving issues faster
+- Review and optimize international plan offerings
+- Focus retention efforts on high-impact churn drivers
+
+### Strategic Focus
+Invest in **usage-based retention programs** and **customer service improvements** to directly address the primary causes of churn.
+
+---
+
+## 12. Next Steps
+- Deploy the model to support retention campaigns
+- Test targeted offers and service interventions
+- Monitor churn patterns and retrain the model over time
+
+---
+
+## 13. Tools & Technologies
+- Python  
+- Pandas, NumPy  
+- Matplotlib, Seaborn  
+- Scikit-learn  
+- Jupyter Notebook  
+
+---
+
+## 14. Project Structure
+│
+├── data/ # Raw and processed datasets
+│ └── customer_churn.csv
+│
+├── notebooks/ # Jupyter notebooks
+│ └── index.ipynb
+│
+├── reports/ # Analysis reports, visualizations, presentations
+│ └── PHASE_3_PROJECT.pdf
+│
+├── README.md # Project overview and instructions
+└── .gitignore # Files to ignore (e.g., large datasets, env files)
+
+
+
+
+
