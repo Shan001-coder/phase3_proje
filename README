@@ -174,4 +174,20 @@ Invest in **usage-based retention programs** and **customer service improvements
 ---
 
 ## 14. Project Structure
+│
+├── data/ # Raw and processed datasets
+│ └── customer_churn.csv
+│
+├── notebooks/ # Jupyter notebooks
+│ └── index.ipynb
+│
+├── reports/ # Analysis reports, visualizations, presentations
+│ └── PHASE_3_PROJECT.pdf
+│
+├── README.md # Project overview and instructions
+└── .gitignore # Files to ignore (e.g., large datasets, env files)
+
+
+
+
 

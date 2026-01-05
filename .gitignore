@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Python packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Data files (optional: raw datasets can be ignored if large)
+data/*.csv
+data/*.xlsx
+data/*.zip
+
+# Reports outputs (optional, if regenerated often)
+reports/*.pdf
+reports/*.png
+reports/*.jpg
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Others
+*.swp
